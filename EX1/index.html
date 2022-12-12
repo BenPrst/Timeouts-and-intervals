@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="typeWritter"></div>
+
+    <script>
+        const outputDiv = document.getElementById("typeWritter");
+
+        const txt = "prout";
+
+        let i = 0;
+
+        const intervalId = setInterval(function () {
+        outputDiv.innerHTML += txt[i];
+        i++;
+
+        if(i===txt.length){
+        clearInterval(intervalId)
+    }
+
+        }, 500);
+    </script>
+</body>
+</html>
